@@ -1,4 +1,4 @@
-l=[34,56,78,12,36,-5,-45,2]
+
 def second_largest():
     for i in range(len(l)):
         mini=i
@@ -6,8 +6,12 @@ def second_largest():
             mini=j
         l[i],l[mini]=l[mini],l[i]
 
-    print(l[-2])
+    return l[-2]
 
+
+l=[34,56,78,12,36,-5,-45,2]
+
+print(second_largest(l))
 
 
 
