@@ -1,4 +1,4 @@
-def common_ele(a,b):
+def common_(a,b):
     c=list()
     for i in a:
         if i in b:
@@ -11,8 +11,5 @@ b=[3,4,5,6,7,8]
 # a=['allow','habit','light','python']
 # b=['question','allow','green','glow', 'mouse','habit']
 
-print(common_ele(a,b))
-
-
-
+print(common_(a,b))
 
