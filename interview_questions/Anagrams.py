@@ -1,5 +1,3 @@
-
-
 def freq(w1,w2):
     wo1=w1.lower()
     wo2=w2.lower()
