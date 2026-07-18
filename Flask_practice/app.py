@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, jsonify
 
 app=Flask(__name__)
 
@@ -15,7 +15,18 @@ def skills():
 @app.route("/contact")
 def contact():
     return "Email: seetha@gmail.com"
-
+@app.route("/profile")
+def profile():
+    return jsonify({ "name": "Seetharaman",
+        "age": 24,
+        "course": "AI"})   
+@app.route("/student/<id>")
+def student(id):
+    return f"student ID is {id}"
+@app.route("/company")
+def company():
+    return jsonify({"company": "ABC Technologies",
+    "location": "Chennai"})
 if __name__=="__main__":
     app.run(debug=True)
 
