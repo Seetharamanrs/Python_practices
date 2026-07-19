@@ -40,8 +40,8 @@ def employee():
             "error":"Age is required"
         }),400
     else:
-        name=data[name]
-        dept=data[dept]
+        name=data["name"]
+        dept=data["deptarment"]
         return jsonify({
             "message":"Employee created sucessfully",
             "name":name,
