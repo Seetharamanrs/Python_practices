@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 
 app=Flask(__name__)
 
@@ -27,6 +27,27 @@ def student(id):
 def company():
     return jsonify({"company": "ABC Technologies",
     "location": "Chennai"})
+
+@app.route("/employee",methods=["POST"])
+def employee():
+    data=request.get_json()
+    if "name" not in data:
+        return jsonify({
+            "error":"Name is required"
+        }),400
+    if "department" not in data:
+        return jsonify({
+            "error":"Age is required"
+        }),400
+    else:
+        name=data[name]
+        dept=data[dept]
+        return jsonify({
+            "message":"Employee created sucessfully",
+            "name":name,
+            "department":dept
+        }),201
+    
 if __name__=="__main__":
     app.run(debug=True)
 
