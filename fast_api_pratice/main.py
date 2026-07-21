@@ -30,5 +30,4 @@ def insurance(age:int,bmi:int):
 @app.get("/model/{model_name}")
 def model(model_name):
     return {
-        "model":model_name
-    }
+        "model":model_name }
