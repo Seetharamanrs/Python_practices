@@ -2,7 +2,7 @@ from fastapi import FastAPI
 
 app=FastAPI()
 
-@app.get("/")
+@app.get("/post")
 def home():
     return {"message":"Hello FastAPI"}
 @app.get("/profile")
